@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DistanceEducation_MVP.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:DistanceEducation_MVP.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DistanceEducation_MVP.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="DistanceEducation_MVP"
+        WindowState="Maximized">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+
+	
+	<Grid>
+
+        <!--Main-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.18*"/>
+            <ColumnDefinition Width="0.47*"/>
+            <ColumnDefinition Width="0.36*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.16*"/>
+            <RowDefinition Height="0.84*"/>
+        </Grid.RowDefinitions>
+
+
+		<!--Menu-->
+        <Border Grid.Column="0" 
+                Grid.RowSpan="2" 
+                Background="Aqua">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.18*"/>
+                    <RowDefinition Height="0.72*"/>
+                    <RowDefinition Height="0.10*"/>
+                </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Background="Red"/>
+				<Border Grid.Row="1" Background="Green">
+                    
+                </Border>
+            <Border Grid.Row="2" Background="Blue"/>
+
+
+            </Grid>
+        
+
+        </Border>
+
+
+
+		<!--Body-->
+        <view:MainPageView Grid.Column="1" 
+                       Grid.ColumnSpan="2"
+                       Grid.Row="1"/>
+
+
+    </Grid>
+    
+
+</Window>
